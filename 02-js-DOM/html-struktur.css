@@ -1,0 +1,22 @@
+header {
+  background: white;
+  top: 0;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-style: groove;
+}
+footer {
+  text-align: center;
+  font-weight: 700;
+  border-style: groove;
+}
+
+article {
+  border-style: groove;
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
