@@ -21,7 +21,6 @@ function vis(person) {
     klon.querySelector("img").src = "faces/" + person.billede;
     klon.querySelector(".fornavn").textContent = person.fornavn;
     klon.querySelector(".efternavn").textContent = person.efternavn;
-    // klon.querySelector(".fødselsdag").textContent = person.fødseldag;
     holder.appendChild(klon);
   });
 }
