@@ -16,12 +16,13 @@ function vis(person) {
   console.log(person);
   const holder = document.querySelector("#holder");
   const skabelon = document.querySelector("template").content;
-  personer.forEach((person) => {
+  person.forEach((person) => {
     const klon = skabelon.cloneNode(true);
     klon.querySelector("img").src = "faces/" + person.billede;
-    klon.querySelector(".fornavn").text.content = person.fornavn;
-    klon.querySelector(".efternavn").text.content = person.efternavn;
-    klon.querySelector(".fødselsdag").text.content = person.fødseldag;
+    klon.querySelector(".fornavn").textContent = person.fornavn;
+    klon.querySelector(".efternavn").textContent = person.efternavn;
+    // klon.querySelector(".fødselsdag").textContent = person.fødseldag;
     holder.appendChild(klon);
   });
 }
+hentData();

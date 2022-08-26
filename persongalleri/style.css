@@ -1,10 +1,13 @@
 #holder {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1 em;
+  gap: 1em;
 }
 
 article {
   border: 1px solid blue;
   padding: 1em;
+}
+img {
+  width: 100%;
 }
