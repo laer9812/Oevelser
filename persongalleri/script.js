@@ -1,0 +1,27 @@
+const endpoint = "https://persongalleri-5d3e.restdb.io/rest/persongalleri";
+const mereinfo = {
+  headers: {
+    "x-apikey": "600fe9211346a1524ff12e31",
+  },
+};
+
+async function hentData() {
+  const response = await fetch(endpoint, mereinfo);
+  const person = await response.json();
+  console.log(person);
+  vis(person);
+}
+
+function vis(person) {
+  console.log(person);
+  const holder = document.querySelector("#holder");
+  const skabelon = document.querySelector("template").content;
+  personer.forEach((person) => {
+    const klon = skabelon.cloneNode(true);
+    klon.querySelector("img").src = "faces/" + person.billede;
+    klon.querySelector(".fornavn").text.content = person.fornavn;
+    klon.querySelector(".efternavn").text.content = person.efternavn;
+    klon.querySelector(".fødselsdag").text.content = person.fødseldag;
+    holder.appendChild(klon);
+  });
+}
